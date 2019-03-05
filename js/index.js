@@ -42,6 +42,11 @@ let input = document.querySelector('input')
 input.addEventListener("select", (e)=>{
     e.target.style.backgroundColor = 'purple'
   })
+//(4)
+const secondButton = document.querySelector('header')
+secondButton.addEventListener('mousemove',(e)=>{
+    e.target.style.backgroundColor = 'red';
+})
 
 
 //------------------------------------------------------------------
