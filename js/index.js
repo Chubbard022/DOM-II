@@ -37,6 +37,13 @@ biggetCursor.addEventListener('mouseover',(e)=>{
     e.target.style.backgroundColor = 'purple'
    // e.stopPropagation()
 })
+//(3)
+let input = document.querySelector('input')
+input.addEventListener("select", (e)=>{
+    e.target.style.backgroundColor = 'purple'
+  })
+
+
 //------------------------------------------------------------------
 //setting all anchor tags to preventDefault
 const allNav = document.querySelectorAll('a')
