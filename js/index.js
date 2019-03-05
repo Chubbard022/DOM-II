@@ -10,32 +10,37 @@
 // select
 // dblclick
 
-//turns the background color to yellow
-let highlight = document.querySelector('.content-section')
-highlight.addEventListener('mouseover', (e)=>{
-    e.target.style.backgroundColor = 'yellow';
+//example of bubbling events
+const textBox = document.querySelector('.text-content')
+textBox.addEventListener('click', (e)=>{
+    //e.target.style.backgroundColor = 'yellow';
+    console.log('whole div clicked')
+})
+
+const innerHeader = document.querySelector('.text-content h2')
+innerHeader.addEventListener('click',(e)=>{
+    console.log('clicked header')
     e.stopPropagation()
 })
 
+
+//------------------------------------------------------------------
 let biggerNav = document.querySelector('nav')
 biggerNav.addEventListener('dblclick',(e)=>{
     e.target.style.fontSize = '3rem'
-    e.stopPropagation()
+    //e.stopPropagation()
 })
 
 let biggetCursor = document.querySelector('p')
 biggetCursor.addEventListener('mouseover',(e)=>{
     e.target.style.backgroundColor = 'purple'
-    e.stopPropagation()
+   // e.stopPropagation()
 })
+
+//setting all anchor tags to preventDefault
 const allNav = document.querySelectorAll('a')
 for(let i=0;i<allNav.length;i++){
     allNav[i].addEventListener('click',(e)=>{
         e.preventDefault()
     })
 }
-// allNav.forEach((item)=>{
-//     item.addEventListener('click',(e)=>{
-//         Console.log('I was clicked')
-//     })
-// })
