@@ -79,3 +79,12 @@ console.log(webpage)
 webpage.addEventListener('mouseup',(e)=>{
     e.target.style.color = 'red'
 })
+//(10)
+const textContent = document.querySelectorAll('.text-content');
+
+document.addEventListener('wheel', (e)=>{
+     for(let i = 0; i<textContent.length; i++){
+       // textContent[i].style.background = 'red';
+     }
+
+});
