@@ -73,4 +73,9 @@ const details = document.querySelector('details')
 details.addEventListener('toggle',(e)=>{
     alert('this is a detail')
 })
-//9
+//(9)
+let webpage = document.querySelector('.content-destination h2');
+console.log(webpage)
+webpage.addEventListener('mouseup',(e)=>{
+    e.target.style.color = 'red'
+})
