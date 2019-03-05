@@ -16,6 +16,7 @@ const textBox = document.querySelector('.text-content')
 textBox.addEventListener('click', (e)=>{
     //e.target.style.backgroundColor = 'yellow';
     console.log('whole div clicked')
+    e.stopPropagation()
 })
 
 const innerHeader = document.querySelector('.text-content h2')
@@ -47,7 +48,10 @@ const secondButton = document.querySelector('header')
 secondButton.addEventListener('mousemove',(e)=>{
     e.target.style.backgroundColor = 'red';
 })
-
+const textParagraph = document.querySelector('.text-content:nth-child(2) p')
+textParagraph.addEventListener('wheel',(e)=>{
+    e.target.style.fontSize = '3rem' 
+})
 
 //------------------------------------------------------------------
 //setting all anchor tags to preventDefault
