@@ -10,6 +10,7 @@
 // select
 // dblclick
 
+//------------------------------------------------------------------
 //example of bubbling events
 const textBox = document.querySelector('.text-content')
 textBox.addEventListener('click', (e)=>{
@@ -22,21 +23,21 @@ innerHeader.addEventListener('click',(e)=>{
     console.log('clicked header')
     e.stopPropagation()
 })
-
-
 //------------------------------------------------------------------
+//(1)
 let biggerNav = document.querySelector('nav')
 biggerNav.addEventListener('dblclick',(e)=>{
     e.target.style.fontSize = '3rem'
     //e.stopPropagation()
 })
 
+//(2)
 let biggetCursor = document.querySelector('p')
 biggetCursor.addEventListener('mouseover',(e)=>{
     e.target.style.backgroundColor = 'purple'
    // e.stopPropagation()
 })
-
+//------------------------------------------------------------------
 //setting all anchor tags to preventDefault
 const allNav = document.querySelectorAll('a')
 for(let i=0;i<allNav.length;i++){
