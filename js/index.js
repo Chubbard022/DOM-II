@@ -44,9 +44,9 @@ input.addEventListener("select", (e)=>{
     e.target.style.backgroundColor = 'purple'
   })
 //(4)
-const secondButton = document.querySelector('header')
-secondButton.addEventListener('mousemove',(e)=>{
-    e.target.style.backgroundColor = 'red';
+const header = document.querySelector('header')
+header.addEventListener('mousemove',(e)=>{
+   // e.target.style.backgroundColor = 'red';
 })
 //(5)
 const textParagraph = document.querySelector('.text-content:nth-child(2) p')
@@ -54,13 +54,12 @@ textParagraph.addEventListener('wheel',(e)=>{
     e.target.style.fontSize = '3rem' 
 })
 //(6)
-
 let newP = document.querySelector('.text-content p') 
-newP.onLoad(alert('paragraph has loaded'))
-// newP.addEventListener('load',(e)=>{
-//     alert('page loaded')
-//     e.stopPropagation()
-// })
+//newP.onLoad(alert('paragraph has loaded'))
+//(7)
+input.addEventListener('focus',(e)=>{
+    e.target.style.backgroundColor = 'yellow'
+})
 
 //------------------------------------------------------------------
 //setting all anchor tags to preventDefault
