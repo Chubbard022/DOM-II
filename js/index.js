@@ -9,7 +9,14 @@
 // scroll
 // select
 // dblclick
-
+//------------------------------------------------------------------
+//setting all anchor tags to preventDefault
+const allNav = document.querySelector('a')
+for(let i=0;i<allNav.length;i++){
+    allNav[i].addEventListener('click',(e)=>{
+        e.preventDefault()
+    })
+}
 //------------------------------------------------------------------
 //example of bubbling events
 const textBox = document.querySelector('.text-content')
@@ -56,16 +63,14 @@ textParagraph.addEventListener('wheel',(e)=>{
 //(6)
 let newP = document.querySelector('.text-content p') 
 //newP.onLoad(alert('paragraph has loaded'))
+
 //(7)
 input.addEventListener('focus',(e)=>{
     e.target.style.backgroundColor = 'yellow'
 })
-
-//------------------------------------------------------------------
-//setting all anchor tags to preventDefault
-const allNav = document.querySelectorAll('a')
-for(let i=0;i<allNav.length;i++){
-    allNav[i].addEventListener('click',(e)=>{
-        e.preventDefault()
-    })
-}
+//(8)
+const details = document.querySelector('details')
+details.addEventListener('toggle',(e)=>{
+    alert('this is a detail')
+})
+//9
